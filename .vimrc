@@ -41,10 +41,10 @@ set smartcase
 set spell spelllang=en_us
 set nobackup
 set noswapfile
-set undofile
-set backupdir=~/.vim/.backup//  
-set directory=~/.vim/.swp//
-set undodir=~/.vim/.undo// 
+" set undofile
+" set backupdir=~/.vim/.backup//  
+" set directory=~/.vim/.swp//
+" set undodir=~/.vim/.undo// 
 set autochdir
 set noerrorbells
 set visualbell
