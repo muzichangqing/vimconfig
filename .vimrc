@@ -38,7 +38,7 @@ set ignorecase
 set smartcase
 
 " 编辑
-set spell spelllang=en_us
+" set spell spelllang=en_us
 set nobackup
 set noswapfile
 " set undofile
