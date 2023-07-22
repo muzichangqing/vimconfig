@@ -53,8 +53,8 @@ global.maplocalleader = " "
 vim.keymap.set("n", "<M-Tab>", "<cmd>bNext<CR>") -- 切换buffer，很奇怪，在warp里无效，iterm2可以
 vim.keymap.set("n", "<leader>bc", "<cmd>bd<CR>", {}) -- 关闭buffer
 
-vim.keymap.set("v", "j", ":m '>+1<cr>gv=gv", {}) -- v 模式下 j移动向下所选行
-vim.keymap.set("v", "k", ":m '<-2<cr>gv=gv", {}) -- v 模式下 k移动向上所选行
+vim.keymap.set("v", "J", ":m '>+1<cr>gv=gv", {}) -- v 模式下 j移动向下所选行
+vim.keymap.set("v", "K", ":m '<-2<cr>gv=gv", {}) -- v 模式下 k移动向上所选行
 
 vim.keymap.set({ "n", "v" }, "<leader>y", "\"+y", {}) -- 复制到系统粘贴板
 
