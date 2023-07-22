@@ -50,14 +50,11 @@ global.mapleader = " "
 global.maplocalleader = " "
 
 -- key mappings --
--- vim.keymap.set("n", "<A-Tab>", "<cmd>bNext<CR>", { silent = true })
-local map = vim.api.nvim_set_keymap
-map("n", "<A-n>", "<cmd>bNext<CR>", {}) -- 切换buffer
-map("n", "<leader>bc", "<cmd>bd<CR>", {}) -- 关闭buffer
+vim.keymap.set("n", "<M-Tab>", "<cmd>bNext<CR>") -- 切换buffer，很奇怪，在warp里无效，iterm2可以
+vim.keymap.set("n", "<leader>bc", "<cmd>bd<CR>", {}) -- 关闭buffer
 
-map("v", "J", ":m '>+1<CR>gv=gv", {}) -- v 模式下 J移动向下所选行
-map("v", "K", ":m '<-2<CR>gv=gv", {}) -- v 模式下 K移动向上所选行
+vim.keymap.set("v", "j", ":m '>+1<cr>gv=gv", {}) -- v 模式下 j移动向下所选行
+vim.keymap.set("v", "k", ":m '<-2<cr>gv=gv", {}) -- v 模式下 k移动向上所选行
 
-map("n", "<leader>y", "\"+y", {}) -- 复制到系统粘贴板
-map("v", "<leader>y", "\"+y", {}) -- 复制到系统粘贴板
+vim.keymap.set({ "n", "v" }, "<leader>y", "\"+y", {}) -- 复制到系统粘贴板
 
