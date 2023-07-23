@@ -12,7 +12,7 @@ return {
             "query", "go", "python", "rust", 
             "javascript", "toml", "json", "sql", 
         },
-        hightlight = {
+        highlight = {
             enable = true,
         },
         indent = {
