@@ -11,6 +11,7 @@ return {
             "c", "lua", "vim", "vimdoc",
             "query", "go", "python", "rust",
             "javascript", "toml", "json", "sql",
+            "markdown", "markdown_inline",
         },
         highlight = {
             enable = true,
