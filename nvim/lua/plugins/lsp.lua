@@ -56,7 +56,7 @@ return {
                 -- vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
                 vim.keymap.set('n', 'gd', require("telescope.builtin").lsp_definitions, opts)
                 -- vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
-                vim.keymap.set('n', 'K', '<cmd>Lspsaga hover_doc ++project<cr>', opts) -- Use Lspsaga hover_doc
+                vim.keymap.set('n', 'K', '<cmd>Lspsaga hover_doc ++project<cr>', opts)            -- Use Lspsaga hover_doc
                 -- vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
                 vim.keymap.set('n', 'gi', require("telescope.builtin").lsp_implementations, opts) -- Use telescope
                 vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
@@ -82,6 +82,7 @@ return {
         require("neodev").setup()
         require("fidget").setup()
         require("lspsaga").setup()
+        local capabilities = require('cmp_nvim_lsp').default_capabilities()
         require("mason").setup()
         require("mason-lspconfig").setup({
             ensure_installed = vim.tbl_keys(servers),
@@ -89,6 +90,7 @@ return {
                 function(server_name)
                     require("lspconfig")[server_name].setup {
                         settings = servers[server_name],
+                        capabilities = capabilities,
                     }
                 end,
             },
