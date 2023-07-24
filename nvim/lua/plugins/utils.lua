@@ -39,7 +39,7 @@ return {
         },
         config = function()
             require("neo-tree").setup()
-            vim.keymap.set({ "n", "v" }, "<leader>e", [[<cmd>Neotree toggle<CR>]])
+            vim.keymap.set({ "n", "v" }, "<leader>t", [[<cmd>Neotree toggle<CR>]])
         end
     },
     {
@@ -53,8 +53,8 @@ return {
     },
     -- s1n7ax/nvim-window-picker
     {
-        "akinsho/toggleterm.nvim", 
-        version = "*", 
+        "akinsho/toggleterm.nvim",
+        version = "*",
         config = function()
             require("toggleterm").setup()
             vim.keymap.set({ "n", "v" }, "<c-`>", [[<cmd>ToggleTerm direction=float<CR>]])

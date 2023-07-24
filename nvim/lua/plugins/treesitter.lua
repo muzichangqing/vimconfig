@@ -7,10 +7,10 @@ return {
     main = "nvim-treesitter.configs",
     build = ":TSUpdate",
     opts = {
-        ensure_installed = { 
-            "c", "lua", "vim", "vimdoc", 
-            "query", "go", "python", "rust", 
-            "javascript", "toml", "json", "sql", 
+        ensure_installed = {
+            "c", "lua", "vim", "vimdoc",
+            "query", "go", "python", "rust",
+            "javascript", "toml", "json", "sql",
         },
         highlight = {
             enable = true,
