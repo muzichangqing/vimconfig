@@ -69,7 +69,7 @@ return {
                 -- { name = "luasnip" },
                 { name = "buffer" },
                 -- { name = "cmdline" },
-                -- { name = "path" },
+                { name = "path" },
             }),
             experimental = {
                 ghost_text = true,
