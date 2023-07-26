@@ -57,7 +57,7 @@ return {
         version = "*",
         config = function()
             require("toggleterm").setup()
-            vim.keymap.set({ "n", "v" }, "<c-`>", [[<cmd>ToggleTerm direction=float<CR>]])
+            vim.keymap.set({ "n", "v" }, "<leader>m", [[<cmd>ToggleTerm direction=float<CR>]])
             vim.keymap.set("t", "<esc>", [[<C-\><C-n>]])
         --    vim.keymap.set("t", "<c-w>", [[<C-\><C-n><C-w>]])
         end,
