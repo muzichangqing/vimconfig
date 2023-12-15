@@ -5,15 +5,14 @@ return {
         "williamboman/mason-lspconfig.nvim",
         "folke/neoconf.nvim",
         "folke/neodev.nvim",
-        {
-            "j-hui/fidget.nvim",
-            tag = "legacy",
-        },
+--        {
+--            "j-hui/fidget.nvim",
+--            tag = "legacy",
+--        },
         "nvimdev/lspsaga.nvim",
     },
     config = function()
         local servers = {
-            pyright = {},
             gopls = {},
             rust_analyzer = {},
             lua_ls = {
@@ -22,8 +21,6 @@ return {
                     telemetry = { enable = false },
                 },
             },
-            jsonls = {},
-            bashls = {},
         }
         -- local lspconfig = require('lspconfig')
         -- lspconfig.gopls.setup{}
@@ -80,7 +77,7 @@ return {
         })
         require("neoconf").setup()
         require("neodev").setup()
-        require("fidget").setup()
+--        require("fidget").setup()
         require("lspsaga").setup()
         local capabilities = require('cmp_nvim_lsp').default_capabilities()
         require("mason").setup()

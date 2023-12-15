@@ -13,7 +13,11 @@ return {
     },
     {
         "lukas-reineke/indent-blankline.nvim",
-        config = true,
+        main = "ibl",
+        opts = {},
+        config = function()
+            require("ibl").setup()
+        end
     },
     {
         "lewis6991/gitsigns.nvim",
